@@ -20,6 +20,15 @@
 
           </li>
 
+          <li class="nav-item">
+
+            <router-link to="/httpclient">
+              <a href="#" class="nav-link">Http Client</a>
+            </router-link>
+
+          </li>
+
+
 
         </ul>
 

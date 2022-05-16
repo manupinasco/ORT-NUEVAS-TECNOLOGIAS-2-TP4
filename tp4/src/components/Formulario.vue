@@ -147,11 +147,4 @@
       color: white;
   }
 
-  hr {
-    background-color: #bbb;
-  }  
-
-  pre {
-    color: white;
-  }
 </style>
