@@ -88,6 +88,24 @@
       </vue-form>
  
 
+      <div class="class table-responsive">
+        <table class="class table table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td> {{formFinal.nombre}}</td>
+            <td>{{formFinal.edad}}</td>
+            <td>{{formFinal.email}}</td>
+
+
+          </tr>
+
+      </table>
+      </div>
+  
     </div>
     
 
@@ -109,6 +127,7 @@
       return {
         formState : {},
         formData : this.getInicialData(),
+        formFinal: this.getInicialData(),
         nombreMinLength : 5,
         nombreMaxLength : 15,
         edadMin: 18,
@@ -126,12 +145,13 @@
       enviar() {
         console.log({...this.formData})
 
+        this.formFinal = this.formData
         this.formData = this.getInicialData()
         this.formState._reset()
       }
     },
     computed: {
-
+    
     }
 }
 
@@ -145,6 +165,14 @@
   .jumbotron {
       background-color: rgb(5, 41, 43);
       color: white;
+  }
+
+  hr {
+    background-color: #bbb;
+  }  
+
+  pre {
+    color: white;
   }
 
 </style>
